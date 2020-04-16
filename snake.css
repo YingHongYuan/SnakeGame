@@ -12,10 +12,11 @@ body {
 
 a.snake-link, a.snake-link:link, a.snake-link:visited {
   color: BLACK;
+
 }
 
 a.snake-link:hover {
-  color: #FfFf54;
+  color: url('jerry.png');
 }
 
 
@@ -43,12 +44,13 @@ a.snake-link:hover {
    background-image: url('jerry.png');
 }
 .snake-snakebody-dead {
-   background-image: url('chesee.png');
+   background-image: url('cheese.png');
 }
 
 .snake-food-block {
     margin: 0px;
     padding: 0px;
+    background-image: url('cheese.png');
     background-color: #FF0000;
     border: 0px solid #000080;
     position: absolute;
