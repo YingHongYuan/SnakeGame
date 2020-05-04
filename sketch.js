@@ -1,9 +1,11 @@
 var s;
+var img;
 var scl = 20;
 
 function setup(){
   createCanvas(600,600);
   s=new Snake();
+  img = loadImage('Snake.png');
 }
 
 function draw(){

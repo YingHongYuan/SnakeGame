@@ -1,4 +1,7 @@
 
+
+
+
 function Snake(){
   this.x = 0;
   this.y = 0;
@@ -15,7 +18,6 @@ function Snake(){
     this.y = this.y + this.yspeed;
   }
   this.show = function(){
-    fill(255);
-    rect(this.x,this.y,10,10);
+    image(img,this.x, this.y, 200 , 180);
   }
 }
