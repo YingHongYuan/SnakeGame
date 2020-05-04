@@ -1,17 +1,40 @@
 var s;
 var img;
-var scl = 20;
+var scl = 50;
+var food;
+var ood;
 
 function setup(){
-  createCanvas(1000,1000);
+  createCanvas(600,600);
   s=new Snake();
   img = loadImage('Snake.png');
+  ood = loadImage('ood.png');
+  frameRate(10);
+  pickLocation();
+}
+function pickLocation(){
+  var cols = floor(width/scl);
+  var rows = floor(height/scl);
+  food = createVector(floor(random(cols)),floor(random(rows)));
+  food.mult(scl);
+}
+
+function mousePressed(){
+  s.total++;
 }
 
 function draw(){
   background(51);
+
+  if (s.eat(food)){
+    pickLocation();
+  }
+  s.death();
   s.update();
   s.show();
+
+  fill(255,0,100);
+  image(ood,food.x,food.y,scl,scl);
 }
 
 function keyPressed(){
