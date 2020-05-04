@@ -1,7 +1,3 @@
-
-
-
-
 function Snake(){
   this.x = 0;
   this.y = 0;
@@ -14,10 +10,13 @@ function Snake(){
   }
 
   this.update = function(){
-    this.x = this.x + this.xspeed;
-    this.y = this.y + this.yspeed;
+    this.x = this.x + this.xspeed*scl;
+    this.y = this.y + this.yspeed*scl;
+
+    this.x = constrain(this.x,0,width-scl);
+    this.y = constrain(this.y,0,width-scl);
   }
   this.show = function(){
-    image(img,this.x, this.y, 200 , 180);
+    image(img,this.x, this.y, scl, scl);
   }
 }

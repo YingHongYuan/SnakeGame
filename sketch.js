@@ -3,7 +3,7 @@ var img;
 var scl = 20;
 
 function setup(){
-  createCanvas(600,600);
+  createCanvas(1000,1000);
   s=new Snake();
   img = loadImage('Snake.png');
 }
