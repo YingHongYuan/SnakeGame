@@ -33,7 +33,6 @@ function draw(){
   s.update();
   s.show();
 
-  fill(255,0,100);
   image(ood,food.x,food.y,scl,scl);
 }
 

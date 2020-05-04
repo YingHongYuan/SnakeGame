@@ -27,7 +27,9 @@ function Snake(){
       var d = dist(this.x,this.y,pos.x,pos.y);
       if (d<1){
         console.log('starting over');
-        this.total=0;
+        fill(255);
+        text("starting over!", 300, 300);
+        this.total=1;
         this.scl = [];
       }
     }
